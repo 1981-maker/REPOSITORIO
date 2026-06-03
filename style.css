@@ -1,0 +1,311 @@
+/* ==========================================
+   REPOSITORIO DIGITAL EDUCATIVO
+   ESTILO HUESO Y CAFÉ
+   HEADER DELGADO + LOGO PEQUEÑO
+========================================== */
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* VARIABLES */
+
+:root{
+
+    --fondo:#F7F3EE;
+    --fondo-secundario:#EFE8DF;
+
+    --cafe-principal:#A67C52;
+    --cafe-oscuro:#6B4F3A;
+
+    --texto:#2F2A26;
+    --texto-secundario:#5E554F;
+
+    --blanco:#FFFFFF;
+
+    --sombra:0 10px 25px rgba(0,0,0,.08);
+}
+
+/* GENERAL */
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: Georgia, "Times New Roman", serif;
+    background:var(--fondo);
+    color:var(--texto);
+    line-height:1.8;
+}
+
+/* CONTENEDOR */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ==========================================
+   HEADER DELGADO MODERNO
+========================================== */
+
+header{
+    background:rgba(247,243,238,.85);
+    backdrop-filter:blur(12px);
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    padding:8px 0; /* 🔥 MÁS DELGADO */
+}
+
+/* BARRA PRINCIPAL */
+.header-content{
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:10px 16px; /* 🔥 MÁS COMPACTO */
+
+    background:white;
+    border-radius:14px;
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+
+    width:95%;
+    margin:auto;
+}
+
+/* LOGO PEQUEÑO EN ESQUINA */
+.logo-area{
+    position:absolute;
+    left:14px;
+    top:50%;
+    transform:translateY(-50%);
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/* LOGO PEQUEÑO */
+.logo-area img{
+    width:40px;   /* 🔥 MÁS PEQUEÑO */
+    height:40px;
+
+    border-radius:8px;
+    object-fit:cover;
+
+    border:2px solid var(--cafe-principal);
+    box-shadow:0 4px 10px rgba(166,124,82,.18);
+
+    transition:.25s ease;
+}
+
+.logo-area img:hover{
+    transform:scale(1.08);
+}
+
+/* TEXTO MÁS DISCRETO */
+.logo-area h1{
+    font-size:.95rem;
+    color:var(--cafe-oscuro);
+    margin-bottom:1px;
+}
+
+.logo-area p{
+    font-size:.75rem;
+    color:var(--texto-secundario);
+}
+
+/* MENÚ COMPACTO */
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:6px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--cafe-oscuro);
+
+    padding:7px 12px;
+    border-radius:999px;
+
+    font-size:.85rem;
+    transition:.25s ease;
+}
+
+nav a:hover{
+    background:var(--cafe-principal);
+    color:white;
+    transform:translateY(-1px);
+}
+
+/* HERO */
+
+.hero{
+    text-align:center;
+    padding:70px 0;
+}
+
+.hero img{
+    width:100%;
+    max-width:1100px;
+    border-radius:18px;
+    margin-bottom:30px;
+    box-shadow:var(--sombra);
+}
+
+.hero h2{
+    font-size:2.6rem;
+    color:var(--cafe-oscuro);
+    margin-bottom:18px;
+}
+
+.hero p{
+    max-width:850px;
+    margin:auto;
+    color:var(--texto-secundario);
+    font-size:1.05rem;
+}
+
+/* SECCIONES */
+
+.section{
+    padding:60px 0;
+}
+
+.section h2{
+    color:var(--cafe-oscuro);
+    margin-bottom:22px;
+    border-left:5px solid var(--cafe-principal);
+    padding-left:12px;
+    font-size:1.8rem;
+}
+
+.section p{
+    color:var(--texto-secundario);
+}
+
+/* TARJETAS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:22px;
+    margin:35px auto;
+}
+
+.card{
+    background:var(--blanco);
+    padding:26px;
+    border-radius:16px;
+    box-shadow:var(--sombra);
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+}
+
+.card h3{
+    color:var(--cafe-oscuro);
+    margin-bottom:12px;
+}
+
+/* BOTONES */
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    background:var(--cafe-principal);
+    color:white;
+    padding:12px 22px;
+    border-radius:10px;
+    font-weight:600;
+    transition:.25s;
+}
+
+.btn:hover{
+    background:var(--cafe-oscuro);
+    transform:translateY(-2px);
+}
+
+/* VIDEOS */
+
+video{
+    width:100%;
+    border-radius:14px;
+    margin-top:12px;
+    box-shadow:var(--sombra);
+}
+
+/* FORM */
+
+form{
+    background:white;
+    padding:26px;
+    border-radius:16px;
+    box-shadow:var(--sombra);
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:6px;
+    margin-bottom:16px;
+    border:1px solid #D5C7B9;
+    border-radius:8px;
+}
+
+/* MAPA */
+
+iframe{
+    width:100%;
+    border:none;
+    border-radius:16px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#E9DED1;
+    text-align:center;
+    padding:30px 15px;
+    margin-top:50px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .header-content{
+        flex-direction:column;
+        gap:14px;
+        text-align:center;
+    }
+
+    .logo-area{
+        position:static;
+        transform:none;
+        justify-content:center;
+    }
+
+    .hero h2{
+        font-size:2rem;
+    }
+
+    .section h2{
+        font-size:1.5rem;
+    }
+}
